@@ -12,9 +12,9 @@ public class Trywithresources {
 		
 		// go to download folder of lab
 // right click and create a file with name as test.txt
-// let the file be in the same localtion
+// let the file be in the same location
 		
-	try(PrintWriter writer = new  PrintWriter(new File("/home/mittalsonal04gm/Downloads/test.txt"))) {
+	try(PrintWriter writer = new  PrintWriter(new File("/tanyayadav/Downloads/test.txt"))) {
 		
 		writer.println("hello All");
 		
