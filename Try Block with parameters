@@ -21,7 +21,7 @@ public class Trywithresources {
 	}
 	catch(ArithmeticException e){
 	   System.out.println(e.getMessage());
-	   System.out.println("No fiel found");
+	   System.out.println("No file found");
 	}
 		
 
