@@ -1,0 +1,42 @@
+package AccessModifierDemo1;
+
+public class Access1 {
+
+		int hours =3;
+	int mins = 47;
+	
+	public String name = "sonal";
+	public String tool = "Selenium";
+	
+	private int a =3;
+	private int b = 47;
+	
+	protected int x = 100;
+	protected int z = 200;
+}
+
+
+package AccessModifierDemo1;
+
+public class Access2 {
+
+	public static void main(String[] args) {
+	
+		Access1 obj = new Access1();
+		
+	System.out.println(obj.hours);
+	System.out.println(	obj.mins);
+	
+
+	
+	System.out.println(obj.name);
+	System.out.println(obj.tool);
+	
+
+	
+	System.out.println(obj.x);
+	System.out.println(obj.z);
+
+	}
+
+}
