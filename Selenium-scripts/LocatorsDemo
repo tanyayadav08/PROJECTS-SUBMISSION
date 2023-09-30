@@ -1,0 +1,61 @@
+package seleniumScripts;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LocatorsDemo {
+
+	public static void main(String[] args) {
+
+		
+		WebDriver driver = new ChromeDriver();
+		
+	
+		
+		driver.manage().window().maximize();
+		driver.get("https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Wikipedia%3ASign+up");
+		
+
+		
+		
+		boolean displayed = driver.findElement(By.id("wpName2")).isDisplayed(); 
+		System.out.println("Element is displayed? " + displayed);
+		
+		
+		boolean enabled = driver.findElement(By.id("wpName2")).isEnabled(); 
+		System.out.println("Element is enabled? " + enabled);
+		
+		
+		driver.findElement(By.id("wpName2")).sendKeys("admin");
+
+
+		
+	WebElement	password = driver.findElement(By.id("wpPassword2"));
+	
+	   displayed = password.isDisplayed();
+	   System.out.println("Element is displayed? " + displayed);
+	   enabled = password.isEnabled();
+	   System.out.println("Element is enabled? " + enabled);
+	   password.sendKeys("admin@123");
+	   
+	   /**************************************************************/
+
+	   
+	   WebElement confirm = driver.findElement(By.name("retype")); 
+	   
+	   confirm.isDisplayed();
+	   confirm.isEnabled();
+	   confirm.sendKeys("admin@123");
+	   
+	   WebElement email = driver.findElement(By.name("email"));
+	   
+	   email.sendKeys("admin@gmail.com");
+	   
+		
+		
+
+	}
+
+}
