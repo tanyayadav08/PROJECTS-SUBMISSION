@@ -1,0 +1,46 @@
+package restAssuredScripts;
+
+
+import static io.restassured.RestAssured.given;
+
+import org.testng.annotations.Test;
+
+import io.restassured.response.Response;
+
+public class Script008GithubBearerToken {
+
+	
+	@Test(priority='2')
+	public void Authorization_bearertoken()
+	{
+		
+	Response res=	given().baseUri("https://api.github.com")
+		.basePath("/user/repos")
+		.header("Authorization","Bearer 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")
+		.when().get()
+		.then().statusCode(200)
+		.extract().response();
+	
+		res.prettyPrint();
+	}
+	
+	
+	
+
+	
+	@Test(priority='2')
+	public void Authorization_bearertoken_specificrepo()
+	{
+		
+	Response res=	given().baseUri("https://api.github.com")
+		.basePath("/repos/tanyayadav08/My-Project")
+		.header("Authorization","Bearer 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")
+		.when().get()
+		.then().statusCode(200)
+		.extract().response();
+	
+		res.prettyPrint();
+	}
+	
+	
+}
